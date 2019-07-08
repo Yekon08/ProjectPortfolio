@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation Sushi</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    
+    <svg width="100%" height="919" viewBox="0 0 1352 919">
+        <g id="Sushi" transform="translate(-212 -81)">
+          <rect id="frame" width="1352" height="919" transform="translate(212 81)" fill="none"/>
+          <ellipse id="bg2" cx="240.5" cy="238" rx="240.5" ry="238" transform="translate(513 302)" fill="#efefef" opacity="0.19"/>
+          <ellipse id="bg1" cx="66.5" cy="53.5" rx="66.5" ry="53.5" transform="translate(1059 323)" fill="#efefef" opacity="0.19"/>
+          <g id="bowl" transform="translate(-81 95)">
+            <path id="Tracé_1" data-name="Tracé 1" d="M1014,663s-77.5,0-117-39S741,468,741,468s.91-38.415,273-39" fill="none" stroke="#fff" stroke-width="12"/>
+            <path id="Tracé_2" data-name="Tracé 2" d="M741,663s77.5,0,117-39,156-156,156-156-.91-38.415-273-39" transform="translate(273)" fill="none" stroke="#fff" stroke-width="12"/>
+            <path id="Tracé_3" data-name="Tracé 3" d="M741,468s.355,27.471,273,28.3S1287,468,1287,468" fill="none" stroke="#fff" stroke-width="12"/>
+          </g>
+          <path id="chopsticks_1" data-name="chopsticks " d="M395.912,178.766c-.772.154-2.4.142-4.436-1.766-2.878-2.689-6.8-275.463-4.207-279.474,2.012-3.113,6.335-5.116,8.171-5.857h-.369v-1h1v0h1v1h-.688c1.836.741,6.158,2.745,8.171,5.857,2.593,4.011-1.329,276.785-4.208,279.474a5.668,5.668,0,0,1-3.816,1.825A3.168,3.168,0,0,1,395.912,178.766Z" transform="matrix(0.719, 0.695, -0.695, 0.719, 905.182, 230.06)" fill="#fff"/>
+          <path id="chopsticks_2" data-name="chopsticks 2" d="M414.365,213.611c-.772.154-2.4.142-4.436-1.765-2.878-2.69-6.8-275.464-4.208-279.475,2.012-3.111,6.331-5.114,8.169-5.856h-.366v-1h1v0h1v1h-.685c1.838.742,6.158,2.745,8.169,5.856,2.594,4.011-1.328,276.785-4.207,279.475a5.67,5.67,0,0,1-3.816,1.824A3.167,3.167,0,0,1,414.365,213.611Z" transform="translate(829.329 222.401) rotate(35)" fill="#fff"/>
+          <g id="sushi-2" data-name="sushi" transform="matrix(0.951, 0.309, -0.309, 0.951, 159.468, 288.339)">
+            <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="53.022" cy="20" rx="53.022" ry="20" transform="translate(766 130)" fill="#232323"/>
+            <ellipse id="Ellipse_2" data-name="Ellipse 2" cx="53.022" cy="20" rx="53.022" ry="20" transform="translate(766 158.064)" fill="#232323"/>
+            <rect id="Rectangle_3" data-name="Rectangle 3" width="106.044" height="28.827" transform="translate(766 149.618)" fill="#232323"/>
+            <ellipse id="Ellipse_3" data-name="Ellipse 3" cx="39.522" cy="8" rx="39.522" ry="8" transform="translate(779.512 135.273)" fill="#fff"/>
+          </g>
+          <g id="sushi_2" data-name="sushi 2" transform="translate(209.164 971.546) rotate(-31)">
+            <ellipse id="Ellipse_1-2" data-name="Ellipse 1" cx="51.711" cy="20" rx="51.711" ry="20" transform="translate(766 130)" fill="#232323"/>
+            <ellipse id="Ellipse_2-2" data-name="Ellipse 2" cx="51.711" cy="20" rx="51.711" ry="20" transform="translate(766 157.417)" fill="#232323"/>
+            <rect id="Rectangle_3-2" data-name="Rectangle 3" width="103.422" height="28.827" transform="translate(766 149.295)" fill="#232323"/>
+            <ellipse id="Ellipse_3-2" data-name="Ellipse 3" cx="38.211" cy="8" rx="38.211" ry="8" transform="translate(779.512 135.273)" fill="#fff"/>
+          </g>
+        </g>
+      </svg>
+
+      <h1>Tes sushis sont prêts !</h1>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+
+      <script>
+      
+        var tl = new TimelineMax()
+
+        tl.from('#bowl', 1, {x: '-280', opacity: 0, ease: Power1.easeOut})
+        tl.from('#sushi-2', 1, {y: '-250', opacity: 0, rotation: 35, transformOrigin: '50% 50%', ease: Bounce.easeOut}, '-=.4')
+        tl.from('#sushi_2', 1, {y: '-250', opacity: 0, rotation: -100, transformOrigin: '50% 50%', ease: Bounce.easeOut}, '-=.7')
+        tl.from('#chopsticks_1', .4, {y: '-250', opacity: 0, rotation: 35, transformOrigin: '50% 50%', ease: Power1.easeOut}, '-=.7')
+        tl.from('#chopsticks_2', .4, {y: '-300', opacity: 0, rotation: -100, transformOrigin: '50% 50%', ease: Power1.easeOut}, '-=.6')
+        tl.from('#bg1', 1, {x: '1400', opacity: 0, ease: Power1.easeOut}, '-=.7')
+        tl.from('#bg2', 1, {x: '350', opacity: 0, ease: Power1.easeOut}, '-=.7')
+
+        tl.from('h1', 2, {y: '150', opacity: 0, ease: Power3.easeOut}, '-=1')
+
+
+
+      </script>
+      
+</body>
+</html>
